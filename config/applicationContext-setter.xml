@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- 通过setter注入User属性 -->
+	<bean id="setterUser" class="com.sizatn.springinjection.model.User">
+		<property name="userNo" value="00101" />
+		<property name="userName" value="aaaaa" />
+	</bean>
+	
+	<!-- 通过setter注入User对象 -->
+	<bean id="setterUserService" class="com.sizatn.springinjection.service.SetterUserService">
+		<property name="u" ref="setterUser"/>
+	</bean>
+	
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- 通过constructor注入User属性 -->
+	<bean id="constructorUser" class="com.sizatn.springinjection.model.User">
+		<constructor-arg index="0" value="00102" />
+		<constructor-arg index="1" value="bbbbb" />
+	</bean>
+	
+	<!-- 通过constructor注入User对象 -->
+	<bean id="constructorUserService" class="com.sizatn.springinjection.service.ConstructorUserService">
+		<constructor-arg ref="constructorUser" />
+	</bean>
+
+</beans>
