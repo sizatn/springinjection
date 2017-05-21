@@ -1,3 +1,5 @@
-# spring常用几种注入方式：
+##### Spring常用几种注入方式：
 
-Integrate DWR and Spring MVC with annotation
+1. setter注入
+2. 构造器注入
+3. 注解注入
